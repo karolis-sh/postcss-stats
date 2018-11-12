@@ -15,7 +15,7 @@
   "author": "Karolis Šarapnickis",
   "main": "index.js",
   "scripts": {
-    "format": "sort-package-json",
+    "format": "prettier --write '**/*.*' && sort-package-json",
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
