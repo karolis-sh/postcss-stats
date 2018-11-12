@@ -2,27 +2,29 @@
   "name": "postcss-stats",
   "version": "0.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "keywords": [],
+  "homepage": "https://github.com/buz-zard/postcss-stats#readme",
+  "bugs": {
+    "url": "https://github.com/buz-zard/postcss-stats/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/buz-zard/postcss-stats.git"
   },
-  "keywords": [],
-  "author": "Karolis Šarapnickis",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/buz-zard/postcss-stats/issues"
-  },
-  "homepage": "https://github.com/buz-zard/postcss-stats#readme",
-  "devDependencies": {
-    "cz-conventional-changelog": "^2.1.0"
+  "author": "Karolis Šarapnickis",
+  "main": "index.js",
+  "scripts": {
+    "format": "sort-package-json",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^2.1.0",
+    "sort-package-json": "^1.16.0"
   }
 }
