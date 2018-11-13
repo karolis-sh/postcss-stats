@@ -1,2 +1,5 @@
 # npm files
 node_modules
+
+# Build products
+/lib

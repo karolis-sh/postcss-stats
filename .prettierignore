@@ -3,6 +3,9 @@
 !*.json
 !*.md
 
+# Build products
+/lib
+
 # npm files
 node_modules
 package.json
