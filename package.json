@@ -1,28 +1,77 @@
 {
   "name": "postcss-stats",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "A PostCSS plugin to display stats",
+  "keywords": [
+    "css",
+    "postcss",
+    "postcss-plugin",
+    "stats"
+  ],
+  "homepage": "https://github.com/buz-zard/postcss-stats#readme",
+  "bugs": {
+    "url": "https://github.com/buz-zard/postcss-stats/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/buz-zard/postcss-stats.git"
   },
-  "keywords": [],
-  "author": "Karolis Šarapnickis",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/buz-zard/postcss-stats/issues"
+  "author": "Karolis Šarapnickis",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib --source-maps",
+    "clean": "rimraf lib",
+    "develop": "npm run build -- --watch",
+    "format": "prettier --write '**/*.*' && sort-package-json",
+    "lint": "run-p lint:*",
+    "lint:js": "eslint .",
+    "lint:md": "markdownlint *.md -i node_modules",
+    "qa": "run-p lint test",
+    "test": "jest"
   },
-  "homepage": "https://github.com/buz-zard/postcss-stats#readme",
-  "devDependencies": {
-    "cz-conventional-changelog": "^2.1.0"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run qa"
+    }
   },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "jest": {
+    "testRegex": "src/.+\\.test\\.js$"
+  },
+  "dependencies": {
+    "postcss": "^7.0.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
+    "@k.sh/eslint-config": "^1.5.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "cz-conventional-changelog": "^2.1.0",
+    "husky": "^1.1.3",
+    "jest": "^23.6.0",
+    "lint-staged": "^8.0.4",
+    "markdownlint-cli": "^0.13.0",
+    "npm-run-all": "^4.1.3",
+    "pretty-quick": "^1.8.0",
+    "rimraf": "^2.6.2",
+    "sort-package-json": "^1.16.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{md,json}": [
+      "pretty-quick --staged"
+    ]
   }
 }

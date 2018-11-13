@@ -1,0 +1,8 @@
+{
+  "extends": ["@k.sh/eslint-config"],
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "parser": "babel-eslint"
+}
