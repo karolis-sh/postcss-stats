@@ -7,6 +7,8 @@ Uses [cssstats] under the hood.
 [![npm version][version-badge]][version]
 [![Build Status][build-badge]][build]
 [![License: MIT][license-badge]][license]
+[![semantic-release][semantic-release-badge]][semantic-release]
+[![code style: prettier][code-style-badge]][code-style]
 
 ## Installation
 
@@ -38,3 +40,7 @@ MIT
 [build]: https://travis-ci.org/buz-zard/postcss-stats
 [license-badge]: https://img.shields.io/badge/License-MIT-yellow.svg
 [license]: https://opensource.org/licenses/MIT
+[semantic-release-badge]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
+[semantic-release]: https://github.com/semantic-release/semantic-release
+[code-style-badge]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
+[code-style]: https://github.com/prettier/prettier
