@@ -1,5 +1,7 @@
 # postcss-stats
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/buz-zard/postcss-stats.svg)](https://greenkeeper.io/)
+
 A simple 1 dependency PostCSS plugin to print stats to the console.
 
 Uses [cssstats] under the hood.
