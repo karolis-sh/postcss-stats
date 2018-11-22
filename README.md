@@ -1,7 +1,5 @@
 # postcss-stats
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/buz-zard/postcss-stats.svg)](https://greenkeeper.io/)
-
 A simple 1 dependency PostCSS plugin to print stats to the console.
 
 Uses [cssstats] under the hood.
@@ -9,7 +7,9 @@ Uses [cssstats] under the hood.
 [![npm version][version-badge]][version]
 [![Build Status][build-badge]][build]
 [![License: MIT][license-badge]][license]
+
 [![semantic-release][semantic-release-badge]][semantic-release]
+[![Greenkeeper badge][greenkeeper-badge]][greenkeeper]
 [![code style: prettier][code-style-badge]][code-style]
 
 ## Installation
@@ -30,6 +30,10 @@ And it will output the stats table to the console:
 
 ![sample output][sample-output]
 
+## References
+
+- <https://cssstats.com/>
+
 ## License
 
 MIT
@@ -46,3 +50,5 @@ MIT
 [semantic-release]: https://github.com/semantic-release/semantic-release
 [code-style-badge]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
 [code-style]: https://github.com/prettier/prettier
+[greenkeeper-badge]: https://badges.greenkeeper.io/buz-zard/postcss-stats.svg
+[greenkeeper]: https://greenkeeper.io/
