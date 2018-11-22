@@ -6,7 +6,8 @@
     "css",
     "postcss",
     "postcss-plugin",
-    "stats"
+    "stats",
+    "cssstats"
   ],
   "homepage": "https://github.com/buz-zard/postcss-stats#readme",
   "bugs": {
