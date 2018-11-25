@@ -10,9 +10,7 @@ const plugin = postcss.plugin(PLUGIN_NAME, () => (root, result) => {
     .use(cssStatsPlugin())
     .process(root);
 
-  const { stats: cssStats } = messages.find(
-    item => item.plugin === CSSSTATS_PLUGIN_NAME
-  );
+  const { stats: cssStats } = messages.find(item => item.plugin === CSSSTATS_PLUGIN_NAME);
 
   const stats = {
     input: {
@@ -31,9 +29,7 @@ const plugin = postcss.plugin(PLUGIN_NAME, () => (root, result) => {
   getStatsTable()
     .add(
       'size',
-      `${chalk.bold(stats.output.size.readableSize)} (from ${
-        stats.input.size.readableSize
-      })`
+      `${chalk.bold(stats.output.size.readableSize)} (from ${stats.input.size.readableSize})`
     )
     .add(
       'gzip size',
@@ -51,20 +47,14 @@ const plugin = postcss.plugin(PLUGIN_NAME, () => (root, result) => {
     .add('selectors', chalk.bold(stats.output.selectors))
     .add(
       'declarations',
-      `${chalk.bold(stats.output.declarations)} (${
-        stats.output.uniqueDeclarations
-      } unique)`
+      `${chalk.bold(stats.output.declarations)} (${stats.output.uniqueDeclarations} unique)`
     )
     .add(
       'media queries',
-      `${chalk.bold(stats.output.mediaQueries)} (${
-        stats.output.uniqueMediaQueries
-      } unique)`
+      `${chalk.bold(stats.output.mediaQueries)} (${stats.output.uniqueMediaQueries} unique)`
     )
     .output({
-      before: root.source.input.file
-        ? `👉 ${chalk.green(root.source.input.file)}\n`
-        : '',
+      before: root.source.input.file ? `👉 ${chalk.green(root.source.input.file)}\n` : '',
     });
 
   result.messages.push({ type: PLUGIN_NAME, plugin: PLUGIN_NAME, stats });

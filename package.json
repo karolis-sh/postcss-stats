@@ -4,10 +4,10 @@
   "description": "A PostCSS plugin to display stats",
   "keywords": [
     "css",
+    "cssstats",
     "postcss",
     "postcss-plugin",
-    "stats",
-    "cssstats"
+    "stats"
   ],
   "homepage": "https://github.com/buz-zard/postcss-stats#readme",
   "bugs": {
