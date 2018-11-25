@@ -37,9 +37,7 @@ describe('postcss-stats', () => {
 
     expect(result.css).not.toEqual(CSS_INPUT);
 
-    const messages = result.messages.filter(
-      item => item.plugin === PLUGIN_NAME
-    );
+    const messages = result.messages.filter(item => item.plugin === PLUGIN_NAME);
 
     const sizeStats = {
       bytes: expect.any(Number),

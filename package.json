@@ -4,10 +4,10 @@
   "description": "A PostCSS plugin to display stats",
   "keywords": [
     "css",
+    "cssstats",
     "postcss",
     "postcss-plugin",
-    "stats",
-    "cssstats"
+    "stats"
   ],
   "homepage": "https://github.com/buz-zard/postcss-stats#readme",
   "bugs": {
@@ -81,6 +81,10 @@
     "postcss": ">= 7.0.0"
   },
   "lint-staged": {
+    "package.json": [
+      "sort-package-json",
+      "git add"
+    ],
     "*.js": [
       "eslint --fix",
       "git add"
