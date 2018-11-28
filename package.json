@@ -92,7 +92,7 @@
       "eslint --fix",
       "git add"
     ],
-    "*.{md,json}": [
+    "*.{md,json,babelrc}": [
       "pretty-quick --staged"
     ]
   }
