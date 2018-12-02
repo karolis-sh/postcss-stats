@@ -81,7 +81,7 @@
     "travis-deploy-once": "^5.0.9"
   },
   "peerDependencies": {
-    "postcss": ">= 7.0.0"
+    "postcss": "^7"
   },
   "lint-staged": {
     "package.json": [
