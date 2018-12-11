@@ -76,7 +76,7 @@
     "postcss-replace": "^1.0.3",
     "pretty-quick": "^1.8.0",
     "rimraf": "^2.6.2",
-    "semantic-release": "^15.12.0",
+    "semantic-release": "^15.12.5",
     "sort-package-json": "^1.16.0",
     "travis-deploy-once": "^5.0.9"
   },
