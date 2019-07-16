@@ -49,7 +49,7 @@
     "testRegex": "src/.+\\.test\\.js$"
   },
   "dependencies": {
-    "brotli-size": "0.1.0",
+    "brotli-size": "1.0.0",
     "chalk": "^2.4.1",
     "cli-table": "^0.3.1",
     "cssstats": "^3.2.0",
