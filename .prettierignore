@@ -2,7 +2,6 @@
 !*.js
 !*.json
 !*.md
-!.babelrc
 
 # Build products
 /lib

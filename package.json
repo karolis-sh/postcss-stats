@@ -45,7 +45,7 @@
       "eslint --fix",
       "git add"
     ],
-    "*.{md,json,babelrc}": [
+    "*.{md,json}": [
       "pretty-quick --staged"
     ],
     "package.json": [
