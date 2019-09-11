@@ -9,7 +9,6 @@ Uses [cssstats] under the hood.
 [![License: MIT][license-badge]][license]
 
 [![semantic-release][semantic-release-badge]][semantic-release]
-[![Greenkeeper badge][greenkeeper-badge]][greenkeeper]
 [![code style: prettier][code-style-badge]][code-style]
 
 ## Installation
@@ -50,5 +49,3 @@ MIT
 [semantic-release]: https://github.com/semantic-release/semantic-release
 [code-style-badge]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
 [code-style]: https://github.com/prettier/prettier
-[greenkeeper-badge]: https://badges.greenkeeper.io/buz-zard/postcss-stats.svg
-[greenkeeper]: https://greenkeeper.io/
