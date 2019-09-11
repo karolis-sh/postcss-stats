@@ -1,5 +1,8 @@
+import path from 'path';
+import fse from 'fs-extra';
 import postcss from 'postcss';
 import postcssReplace from 'postcss-replace';
+import postcssCssnano from 'cssnano';
 
 import { PLUGIN_NAME } from './constants';
 import postcssStats from '.';
@@ -63,5 +66,16 @@ describe('postcss-stats', () => {
         uniqueMediaQueries: expect.any(Number),
       },
     });
+  });
+
+  it('should analyze normalize.css', async () => {
+    const CSS_INPUT = (await fse.readFile(
+      path.resolve(__dirname, './__tests__/data/normalize.css')
+    )).toString();
+    const result = await postcss()
+      .use(postcssCssnano({ preset: 'default' }))
+      .use(postcssStats())
+      .process(CSS_INPUT, { from: undefined });
+    expect(result.warnings().length).toBe(0);
   });
 });
