@@ -41,8 +41,8 @@ MIT
 [cssstats]: https://github.com/cssstats/core
 [version-badge]: https://badge.fury.io/js/postcss-stats.svg
 [version]: https://www.npmjs.com/package/postcss-stats
-[build-badge]: https://travis-ci.org/buz-zard/postcss-stats.svg?branch=master
-[build]: https://travis-ci.org/buz-zard/postcss-stats
+[build-badge]: https://travis-ci.org/karolis-sh/postcss-stats.svg?branch=master
+[build]: https://travis-ci.org/karolis-sh/postcss-stats
 [license-badge]: https://img.shields.io/badge/License-MIT-yellow.svg
 [license]: https://opensource.org/licenses/MIT
 [semantic-release-badge]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg

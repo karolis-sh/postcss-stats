@@ -9,13 +9,13 @@
     "postcss-plugin",
     "stats"
   ],
-  "homepage": "https://github.com/buz-zard/postcss-stats#readme",
+  "homepage": "https://github.com/karolis-sh/postcss-stats#readme",
   "bugs": {
-    "url": "https://github.com/buz-zard/postcss-stats/issues"
+    "url": "https://github.com/karolis-sh/postcss-stats/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/buz-zard/postcss-stats.git"
+    "url": "https://github.com/karolis-sh/postcss-stats.git"
   },
   "license": "MIT",
   "author": "Karolis Šarapnickis",
