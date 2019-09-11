@@ -31,18 +31,8 @@ const plugin = postcss.plugin(PLUGIN_NAME, () => (root, result) => {
       'size',
       `${chalk.bold(stats.output.size.readableSize)} (from ${stats.input.size.readableSize})`
     )
-    .add(
-      'gzip size',
-      `${chalk.bold(stats.output.size.gzipReadableSize)} (from ${
-        stats.input.size.gzipReadableSize
-      })`
-    )
-    .add(
-      'brotli size',
-      `${chalk.bold(stats.output.size.brotliReadableSize)} (from ${
-        stats.input.size.brotliReadableSize
-      })`
-    )
+    .add('gzip size', chalk.bold(stats.output.size.gzipReadableSize))
+    .add('brotli size', chalk.bold(stats.output.size.brotliReadableSize))
     .add('rules', chalk.bold(stats.output.rules))
     .add('selectors', chalk.bold(stats.output.selectors))
     .add(

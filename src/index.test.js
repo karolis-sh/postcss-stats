@@ -1,42 +1,15 @@
+import path from 'path';
+import fse from 'fs-extra';
 import postcss from 'postcss';
 import postcssReplace from 'postcss-replace';
+import postcssCssnano from 'cssnano';
 
 import { PLUGIN_NAME } from './constants';
 import postcssStats from '.';
 
 describe('postcss-stats', () => {
-  it('should not modify the output', async () => {
-    const CSS_INPUT = `
-    .foo {
-      color: tomato;
-    }
-
-    .bar .baz {
-      color: hotpink;
-    }
-    `;
-
-    const result = await postcss()
-      .use(postcssStats())
-      .process(CSS_INPUT, { from: undefined });
-    expect(result.css).toEqual(CSS_INPUT);
+  const expectResult = result => {
     expect(result.warnings().length).toBe(0);
-  });
-
-  it('should return a stats object', async () => {
-    const CSS_INPUT = `
-    .foo {
-      content: "{{ author }}";
-    }
-    `;
-
-    const result = await postcss()
-      .use(postcssReplace({ data: { author: 'Me' } }))
-      .use(postcssStats())
-      .process(CSS_INPUT, { from: undefined });
-
-    expect(result.css).not.toEqual(CSS_INPUT);
-
     const messages = result.messages.filter(item => item.plugin === PLUGIN_NAME);
 
     const sizeStats = {
@@ -63,5 +36,50 @@ describe('postcss-stats', () => {
         uniqueMediaQueries: expect.any(Number),
       },
     });
+  };
+
+  it('should not modify the output', async () => {
+    const CSS_INPUT = `
+    .foo {
+      color: tomato;
+    }
+
+    .bar .baz {
+      color: hotpink;
+    }
+    `;
+
+    const result = await postcss()
+      .use(postcssStats())
+      .process(CSS_INPUT, { from: undefined });
+    expect(result.css).toEqual(CSS_INPUT);
+    expectResult(result);
+  });
+
+  it('should return a stats object', async () => {
+    const CSS_INPUT = `
+    .foo {
+      content: "{{ author }}";
+    }
+    `;
+
+    const result = await postcss()
+      .use(postcssReplace({ data: { author: 'Me' } }))
+      .use(postcssStats())
+      .process(CSS_INPUT, { from: undefined });
+
+    expect(result.css).not.toEqual(CSS_INPUT);
+    expectResult(result);
+  });
+
+  it('should analyze normalize.css', async () => {
+    const CSS_INPUT = (await fse.readFile(
+      path.resolve(__dirname, './__tests__/data/normalize.css')
+    )).toString();
+    const result = await postcss()
+      .use(postcssCssnano({ preset: 'default' }))
+      .use(postcssStats())
+      .process(CSS_INPUT, { from: undefined });
+    expectResult(result);
   });
 });
