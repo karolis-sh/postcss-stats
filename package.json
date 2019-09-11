@@ -65,10 +65,10 @@
     "brotli-size": "0.1.0",
     "chalk": "^2.4.1",
     "cli-table": "^0.3.1",
-    "cssstats": "^3.2.0",
-    "gzip-size": "^5.0.0",
-    "postcss": "^7.0.0",
-    "pretty-bytes": "^5.1.0"
+    "cssstats": "^3.4.0",
+    "gzip-size": "^5.1.1",
+    "postcss": "^7.0.18",
+    "pretty-bytes": "^5.3.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.0",
