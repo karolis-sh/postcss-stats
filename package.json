@@ -1,6 +1,6 @@
 {
   "name": "postcss-stats",
-  "version": "0.0.0-development",
+  "version": "1.1.0",
   "description": "A PostCSS plugin to display stats",
   "keywords": [
     "css",
@@ -29,9 +29,10 @@
     "lint:js": "eslint .",
     "lint:md": "markdownlint *.md -i node_modules",
     "qa": "run-p lint test",
-    "semantic-release": "semantic-release",
+    "prerelease": "git checkout master && git pull && npm i",
+    "release": "run-s clean build qa && standard-version",
+    "postrelease": "git push --follow-tags && npm publish",
     "test": "jest",
-    "travis-deploy-once": "travis-deploy-once",
     "upgrade-interactive": "npm-check --update"
   },
   "husky": {
@@ -91,8 +92,8 @@
     "postcss-replace": "^1.0.7",
     "pretty-quick": "^1.11.1",
     "rimraf": "^3.0.0",
-    "semantic-release": "^15.13.24",
     "sort-package-json": "^1.22.1",
+    "standard-version": "^7.1.0",
     "travis-deploy-once": "^5.0.11"
   }
 }
