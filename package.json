@@ -21,8 +21,6 @@
   "author": "Karolis Šarapnickis",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src --out-dir lib --source-maps",
-    "clean": "rimraf lib",
     "develop": "npm run build -- --watch",
     "format": "prettier --write '**/*.*' && sort-package-json",
     "lint": "run-p lint:*",
@@ -30,7 +28,7 @@
     "lint:md": "markdownlint *.md -i node_modules",
     "qa": "run-p lint test",
     "prerelease": "git checkout master && git pull && npm i",
-    "release": "run-s clean build qa && standard-version",
+    "release": "npm run qa && standard-version",
     "postrelease": "git push --follow-tags && npm publish",
     "test": "jest",
     "upgrade-interactive": "npm-check --update"
@@ -59,9 +57,6 @@
       "path": "cz-conventional-changelog"
     }
   },
-  "jest": {
-    "testRegex": "src/.+\\.test\\.js$"
-  },
   "dependencies": {
     "brotli-size": "0.1.0",
     "chalk": "^2.4.1",
@@ -72,14 +67,7 @@
     "pretty-bytes": "^5.3.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.6.0",
-    "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
     "@k.sh/eslint-config": "^1.13.0",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-eslint": "^10.0.3",
-    "babel-jest": "^24.9.0",
-    "babel-plugin-add-module-exports": "^1.0.2",
     "cssnano": "^4.1.10",
     "cz-conventional-changelog": "^3.0.2",
     "fs-extra": "^8.1.0",
@@ -93,7 +81,6 @@
     "pretty-quick": "^1.11.1",
     "rimraf": "^3.0.0",
     "sort-package-json": "^1.22.1",
-    "standard-version": "^7.1.0",
-    "travis-deploy-once": "^5.0.11"
+    "standard-version": "^7.1.0"
   }
 }
