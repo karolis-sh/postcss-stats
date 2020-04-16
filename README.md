@@ -5,6 +5,7 @@ A simple 1 dependency PostCSS plugin to print stats to the console.
 Uses [cssstats] under the hood.
 
 [![npm version][version-badge]][version]
+![Node.js CI](https://github.com/karolis-sh/postcss-stats/workflows/Node.js%20CI/badge.svg)
 [![License: MIT][license-badge]][license]
 
 [![code style: prettier][code-style-badge]][code-style]
