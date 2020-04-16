@@ -5,7 +5,6 @@ A simple 1 dependency PostCSS plugin to print stats to the console.
 Uses [cssstats] under the hood.
 
 [![npm version][version-badge]][version]
-[![Build Status][build-badge]][build]
 [![License: MIT][license-badge]][license]
 
 [![code style: prettier][code-style-badge]][code-style]
@@ -40,8 +39,6 @@ MIT
 [cssstats]: https://github.com/cssstats/core
 [version-badge]: https://badge.fury.io/js/postcss-stats.svg
 [version]: https://www.npmjs.com/package/postcss-stats
-[build-badge]: https://travis-ci.org/karolis-sh/postcss-stats.svg?branch=master
-[build]: https://travis-ci.org/karolis-sh/postcss-stats
 [license-badge]: https://img.shields.io/badge/License-MIT-yellow.svg
 [license]: https://opensource.org/licenses/MIT
 [code-style-badge]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
