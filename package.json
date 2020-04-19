@@ -28,8 +28,7 @@
     "lint:md": "markdownlint *.md -i node_modules",
     "qa": "run-p lint test",
     "prerelease": "git checkout master && git pull && npm i",
-    "release": "npm run qa && standard-version",
-    "postrelease": "git push --follow-tags && npm publish",
+    "release": "npm run qa && standard-version && git push --follow-tags && npm publish",
     "test": "jest",
     "upgrade-interactive": "npm-check --update"
   },
