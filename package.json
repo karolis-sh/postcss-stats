@@ -21,28 +21,28 @@
   "author": "Karolis Šarapnickis",
   "main": "lib/index.js",
   "scripts": {
-    "develop": "npm run build -- --watch",
-    "format": "prettier --write '**/*.*' && sort-package-json",
+    "format": "run-p format:*",
+    "format:package.json": "sort-package-json package.json",
+    "format:prettier": "prettier --write '**/*.*'",
     "lint": "run-p lint:*",
     "lint:js": "eslint .",
-    "lint:md": "markdownlint *.md -i node_modules",
+    "lint:md": "markdownlint-cli2 '**/*.md' '!node_modules' '!**/node_modules'",
     "qa": "run-p lint test",
-    "prerelease": "git checkout master && git pull && npm i",
-    "release": "npm run qa && standard-version && git push --follow-tags && npm publish",
-    "test": "jest",
-    "upgrade-interactive": "npm-check --update"
+    "prerelease": "git checkout master && git pull && yarn",
+    "release": "yarn qa && standard-version && git push --follow-tags && yarn publish",
+    "test": "jest"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "npm run qa"
+      "pre-push": "yarn qa"
     }
   },
   "lint-staged": {
     "*.js": [
       "eslint --fix"
     ],
-    "*.{md,json}": [
+    "*.{md,json,yml}": [
       "pretty-quick --staged"
     ],
     "package.json": [
@@ -64,19 +64,18 @@
     "pretty-bytes": "^5.3.0"
   },
   "devDependencies": {
-    "@k.sh/eslint-config": "^1.14.3",
+    "@k.sh/eslint-config": "^1.18.1",
     "cssnano": "^4.1.10",
     "cz-conventional-changelog": "^3.1.0",
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^9.0.1",
     "husky": "^4.2.5",
-    "jest": "^25.3.0",
+    "jest": "^26.5.3",
     "lint-staged": "^10.1.3",
-    "markdownlint-cli": "^0.22.0",
-    "npm-check": "^5.9.2",
+    "markdownlint-cli2": "^0.0.10",
     "npm-run-all": "^4.1.5",
     "postcss-replace": "^1.1.2",
-    "pretty-quick": "^2.0.1",
+    "pretty-quick": "^3.1.0",
     "sort-package-json": "^1.41.0",
-    "standard-version": "^8.0.1"
+    "standard-version": "^9.0.0"
   }
 }

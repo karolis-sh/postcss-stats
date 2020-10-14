@@ -12,16 +12,14 @@ Uses [cssstats] under the hood.
 
 ## Installation
 
-> npm install postcss-stats
+`npm i -D postcss-stats` or `yarn add --dev postcss-stats`
 
 ## Usage
 
 Just add the `postcss-stats` plugin:
 
 ```javascript
-postcss()
-  .use(postcssStats())
-  .process(css);
+postcss().use(postcssStats()).process(css);
 ```
 
 And it will output the stats table to the console:
