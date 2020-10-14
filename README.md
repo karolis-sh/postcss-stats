@@ -19,9 +19,7 @@ Uses [cssstats] under the hood.
 Just add the `postcss-stats` plugin:
 
 ```javascript
-postcss()
-  .use(postcssStats())
-  .process(css);
+postcss().use(postcssStats()).process(css);
 ```
 
 And it will output the stats table to the console:
