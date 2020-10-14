@@ -12,7 +12,7 @@ Uses [cssstats] under the hood.
 
 ## Installation
 
-> npm install postcss-stats
+`npm i -D postcss-stats` or `yarn add --dev postcss-stats`
 
 ## Usage
 
