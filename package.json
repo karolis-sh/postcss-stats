@@ -29,7 +29,7 @@
     "lint:md": "markdownlint-cli2 '**/*.md' '!node_modules' '!**/node_modules'",
     "qa": "run-p lint test",
     "prerelease": "git checkout master && git pull && yarn",
-    "release": "yarn qa && standard-version && git push --follow-tags && yarn publish",
+    "release": "yarn qa && standard-version --no-verify && git push --follow-tags --no-verify && yarn publish",
     "test": "jest"
   },
   "husky": {
