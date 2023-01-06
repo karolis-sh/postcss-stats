@@ -4,6 +4,8 @@
 !*.json
 !*.md
 !*.yml
+!*.sh
+!*.gitignore
 
 # npm files
 node_modules
